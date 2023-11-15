@@ -92,12 +92,10 @@ function draw() {
     text("Pontuação: "+ score, 500,50);
     //checar se gameState é PLAY
     if(gameState == PLAY){
-        //6 mudar frameRate aumentar a quantidade pontos
-       score += Math.round(getFrameRate() / 60) ;
+        //6  frameRate aumentar a quantidade pontos
+        score += Math.round(getFrameRate() / 60) ;
         //getFrameRate = pegar taxa de quadros
-        // fill ("black");
-        // textSize (25);
-        // text (score, 500, 50);
+     
         //aumenta a velocidade do solo a cada 100 pontos
         solo.velocityX = -(3 + score/100);
         //a cada 100 pontos,
@@ -142,9 +140,9 @@ function draw() {
         grupoNuvem.setLifetimeEach(-1);
         trex.changeAnimation("colidido");
         //5  checa se a sprite restart foi clicada
-        if(mousePressedOver(restart)){
+        if(         (     ) ) {
             //REINICIA O JOGO
-            reiniciar();
+                   
 
         }
     }
@@ -204,17 +202,16 @@ function criarCactos(){
 // 1. Escreva uma função reset() vazia 
 function reiniciar(){
     // 4 mudar a animação
-    trex.changeAnimation("correndo");
+    
 
 // 2  voltar para o estado inicial
-    gameState = PLAY; 
+   
 // 7 volta a pontuação para zero 
-    score = 0;
+   
 //3 destrói todos os cactos com a função sprite.destroyEach();
-    grupoCacto.destroyEach();
+   
 //3 destruir as nuvens
-    grupoNuvem.destroyEach();
+  
 // 2 esconder as sprites
-    restart.visible = false;
-    gameOver.visible = false;
+    
 }
